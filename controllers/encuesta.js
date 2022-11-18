@@ -35,8 +35,31 @@ const deleteEncuesta = async( req, res) => {
         encuesta
     })
 }
+const putEncuesta = async ( req, res) => {
+    const { } = req.body
+
+    const encuesta = await Encuesta.findOneAndUpdate({})
+
+    res.json({
+        msg: 'PUT API ENCUESTA',
+        encuesta
+    })
+}
+
+const patchEncuesta = async (req, res) => {
+    const {} = req.body 
+
+    const encuesta = await Encuesta.findOneAndUpdate ({})
+
+    res.json ({
+        msg: "PATCH API ENCUESTA",
+        encuesta
+    })
+}
 module.exports = {
     getEncuesta,
     postEncuesta,
-    deleteEncuesta
+    deleteEncuesta,
+    putEncuesta,
+    PatchEncuesta
 }
